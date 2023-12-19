@@ -50,11 +50,11 @@ const App = () => {
     }
 
     alert("Please try again");
-    return handleQuote({ value: "Hello" });
+    return handleQuote({ quote: "Hello" });
   };
 
   const handleClick = async () => {
-    handleQuote({ value: "..." });
+    handleQuote({ quote: "..." });
     return await getQuote();
   };
 
@@ -73,7 +73,7 @@ const App = () => {
             strings: [quote.value],
             autoStart: true,
             loop: true,
-            pauseFor: quote.value.length > 10 ? 5000 : 500,
+            pauseFor: quote?.value.length > 10 ? 5000 : 500,
           }}
         />
         <p style={{ color: "#FF9800", marginTop: "100px" }}>{quote.author}</p>
