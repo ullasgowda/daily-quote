@@ -50,6 +50,7 @@ const App = () => {
     }
 
     alert("Please try again");
+    return handleQuote({ value: "Hello" });
   };
 
   const handleClick = async () => {
